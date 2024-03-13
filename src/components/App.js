@@ -20,14 +20,26 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Form inline>
-          <h2>Input a Date</h2>
-          <FormControl
-            type='date'
-            onChange={(event) => this.setState({ newDate: event.target.value })}
-          ></FormControl>
-          <Button onClick={() => this.changeDate()}>Submit</Button>
-          <Stats date={this.state.date}/>
+        <Form>
+          <div className='input-container'>
+            <h2>Input a Date</h2>
+            <div className='input-group'>
+              <FormControl
+                type='date'
+                onChange={(event) =>
+                  this.setState({ newDate: event.target.value })
+                }
+              />
+              <Button
+                className='Button'
+                variant='success'
+                onClick={() => this.changeDate()}
+              >
+                Submit
+              </Button>
+            </div>
+          </div>
+          <Stats date={this.state.date} />
         </Form>
       </div>
     );
