@@ -14,14 +14,27 @@ class Stats extends Component {
     let months = Math.floor(days / 31);
     days -= months * 31;
 
-    return `${years} years, ${months} months, ${days} days`;
+    let timeString = '';
+
+    if (years > 0) {
+      timeString += `${years} ${years === 1 ? 'year' : 'years'}, `;
+    }
+    if (months > 0) {
+      timeString += `${months} ${months === 1 ? 'month' : 'months'}, `;
+    }
+    if (days > 0) {
+      timeString += `${days} ${days === 1 ? 'day' : 'days'}`;
+    }
+
+    return timeString;
   }
 
   render() {
     return (
       <div>
         <h2>
-          It has been {this.timeSince(this.props.date)} since {this.props.date}
+          There are {this.timeSince(this.props.date)} between now and{' '}
+          {this.props.date}
         </h2>
         <img src={calendarIcon} alt='calendar' />
       </div>
