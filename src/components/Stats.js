@@ -24,6 +24,8 @@ class Stats extends Component {
     }
     if (days > 0) {
       timeString += `${days} ${days === 1 ? 'day' : 'days'}`;
+    } else {
+      timeString += `Less than a day`;
     }
 
     return timeString;
@@ -33,8 +35,7 @@ class Stats extends Component {
     return (
       <div>
         <h2>
-          There are {this.timeSince(this.props.date)} between now and{' '}
-          {this.props.date}
+          {this.timeSince(this.props.date)} between now and {this.props.date}
         </h2>
         <img src={calendarIcon} alt='calendar' />
       </div>
