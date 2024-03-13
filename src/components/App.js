@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import './App.css';
+import Footer from './Footer';
 import Stats from './Stats';
 
 class App extends Component {
@@ -52,6 +53,7 @@ class App extends Component {
             </div>
           )}
         </Form>
+        <Footer />
       </div>
     );
   }
