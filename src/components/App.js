@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import './App.css';
+import Stats from './Stats';
 
 class App extends Component {
   constructor() {
@@ -26,6 +27,7 @@ class App extends Component {
             onChange={(event) => this.setState({ newDate: event.target.value })}
           ></FormControl>
           <Button onClick={() => this.changeDate()}>Submit</Button>
+          <Stats date={this.state.date}/>
         </Form>
       </div>
     );
