@@ -1,3 +1,4 @@
 import ReactDOM from 'react-dom';
+import App from './components/App';
 
-ReactDOM.render(<div>Time Tracker ⌚</div>, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'));
