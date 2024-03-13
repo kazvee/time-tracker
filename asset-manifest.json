@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/time-tracker/static/css/main.37cd81e7.css",
+    "main.js": "/time-tracker/static/js/main.60d5b07c.js",
+    "static/media/calendar.svg": "/time-tracker/static/media/calendar.92ed1dd486d243fc581bfb4995869319.svg",
+    "index.html": "/time-tracker/index.html",
+    "main.37cd81e7.css.map": "/time-tracker/static/css/main.37cd81e7.css.map",
+    "main.60d5b07c.js.map": "/time-tracker/static/js/main.60d5b07c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37cd81e7.css",
+    "static/js/main.60d5b07c.js"
+  ]
+}
