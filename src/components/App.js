@@ -43,7 +43,9 @@ class App extends Component {
               </Button>
             </div>
           </div>
-          {this.state.showStats ? <Stats date={this.state.date} /> : null}
+          {this.state.showStats 
+          ? <div className='fade date-stats'><Stats date={this.state.date} /></div> 
+          : null}
         </Form>
       </div>
     );
