@@ -14,7 +14,6 @@ class App extends Component {
   }
 
   changeDate() {
-    console.log(`⌚ ${this.state.newDate}`);
     this.setState({
       date: this.state.newDate,
       showStats: true,
