@@ -6,7 +6,14 @@ class Stats extends Component {
     let otherDate = new Date(date).getTime();
     let difference = Math.abs(today - otherDate);
 
-    return `${difference} milliseconds`;
+    let days = Math.floor(difference / (1000 * 3600 * 24));
+    let years = Math.floor(days / 365);
+    days -= years * 365;
+
+    let months = Math.floor(days / 31);
+    days -= months * 31;
+
+    return `${years} years, ${months} months, ${days} days ⌚`;
   }
 
   render() {
