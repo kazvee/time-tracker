@@ -9,12 +9,16 @@ class App extends Component {
     this.state = {
       newDate: '',
       date: '2000-01-01',
+      showStats: false,
     };
   }
 
   changeDate() {
     console.log(`⌚ ${this.state.newDate}`);
-    this.setState({ date: this.state.newDate });
+    this.setState({
+      date: this.state.newDate,
+      showStats: true,
+    });
   }
 
   render() {
@@ -22,7 +26,7 @@ class App extends Component {
       <div className='App'>
         <Form>
           <div className='input-container'>
-            <h2>Input a Date</h2>
+            <h1>Input a Date</h1>
             <div className='input-group'>
               <FormControl
                 type='date'
@@ -39,7 +43,7 @@ class App extends Component {
               </Button>
             </div>
           </div>
-          <Stats date={this.state.date} />
+          {this.state.showStats ? <Stats date={this.state.date} /> : null}
         </Form>
       </div>
     );
