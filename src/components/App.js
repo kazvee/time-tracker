@@ -21,6 +21,9 @@ class App extends Component {
   }
 
   render() {
+    const { newDate, showStats } = this.state;
+    const isDateSelected = newDate !== '';
+
     return (
       <div className='App'>
         <Form>
@@ -37,14 +40,17 @@ class App extends Component {
                 className='Button'
                 variant='success'
                 onClick={() => this.changeDate()}
+                disabled={!isDateSelected}
               >
                 Submit
               </Button>
             </div>
           </div>
-          {this.state.showStats 
-          ? <div className='fade date-stats'><Stats date={this.state.date} /></div> 
-          : null}
+          {showStats && (
+            <div className='fade date-stats'>
+              <Stats date={this.state.date} />
+            </div>
+          )}
         </Form>
       </div>
     );
