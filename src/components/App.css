@@ -24,3 +24,21 @@
 img {
   margin-top: 20px;
 }
+
+.fade {
+  animation-name: fade-in;
+  animation-duration: 2s;
+}
+
+.date-stats {
+  opacity: 100;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
