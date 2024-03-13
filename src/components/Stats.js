@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import calendarIcon from '../assets/calendar.svg';
 
 class Stats extends Component {
   timeSince(date) {
@@ -13,14 +14,16 @@ class Stats extends Component {
     let months = Math.floor(days / 31);
     days -= months * 31;
 
-    return `${years} years, ${months} months, ${days} days ⌚`;
+    return `${years} years, ${months} months, ${days} days`;
   }
 
   render() {
     return (
       <div>
-        <h3>{this.props.date}</h3>
-        <h4>It has been {this.timeSince(this.props.date)}</h4>
+        <h2>
+          It has been {this.timeSince(this.props.date)} since {this.props.date}
+        </h2>
+        <img src={calendarIcon} alt='calendar' />
       </div>
     );
   }
