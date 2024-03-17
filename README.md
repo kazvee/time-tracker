@@ -8,6 +8,8 @@ Time Tracker is a React application that enables users to estimate how much time
 
 A demo can be viewed ✨[HERE](https://kazvee.github.io/time-tracker/)✨
 
+![Time Tracker Screenshot](/src/assets/Time_Tracker_Screenshot.png)
+
 ## Features
 - Provides a calculation between now and past or future dates
 - Displays the time elapsed in years, months, and days
